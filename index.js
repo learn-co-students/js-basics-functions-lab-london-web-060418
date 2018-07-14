@@ -19,13 +19,14 @@ function distanceTravelledInFeet(startB, finishB) {
 }
 
 function calculatesFarePrice(startB, finishB) {
-  if (distanceTravelledInFeet(startB, finishB) < 400) {
+  let distance = distanceTravelledInFeet(startB, finishB);
+  if (distance <= 400) {
     return 0;
-  } else if (distanceTravelledInFeet(startB, finishB) > 400 && distanceTravelledInFeet(startB, finishB) < 2000) {
-    return (distanceTravelledInFeet(startB, finishB) - 400) * 0.02
-  } else if (distanceTravelledInFeet(startB, finishB) > 2000 && distanceTravelledInFeet(startB, finishB) < 2500) {
+  } else if (distance > 400 && distance <= 2000) {
+    return (distance - 400) * 0.02
+  } else if (distance > 2000 && distance < 2500) {
     return 25;
-  } else if (distanceTravelledInFeet(startB, finishB) > 2500) {
+  } else if (distance > 2500) {
     return 'cannot travel that far';
   }
 }
