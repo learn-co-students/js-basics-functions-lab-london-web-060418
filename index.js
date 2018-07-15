@@ -3,15 +3,15 @@ function distanceFromHqInBlocks (someValue) {
   const hqBlock = 42
   let result = someValue - hqBlock
   return Math.abs(result)
-}
+};
 
 function distanceFromHqInFeet(someValue) {
   return distanceFromHqInBlocks(someValue) * 264
-}
+};
 
 function distanceTravelledInFeet(start, finish) {
   return Math.abs(start - finish) * 264
-}
+};
 
 function calculatesFarePrice(start, destination) {
 
@@ -27,4 +27,4 @@ function calculatesFarePrice(start, destination) {
   } else {
     return 25
   }
-}
+};
